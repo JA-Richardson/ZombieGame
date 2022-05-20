@@ -1,2 +1,24 @@
 ﻿  ZombieGame.cpp
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(13,53): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(14,53): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(15,71): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(15,51): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(40,27): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(63,37): warning C4390: ';': empty controlled statement found; is this the intent?
   ZombieGame.vcxproj -> C:\Users\arich\Documents\VS Projects\ZombieGame\Debug\ZombieGame.exe
