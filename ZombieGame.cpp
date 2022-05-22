@@ -1,5 +1,8 @@
 #include <SFML/Graphics.hpp>
+
+#include "ZombieGame.h"
 #include "Player.h"
+
 
 using namespace sf;
 int main()
@@ -26,6 +29,10 @@ int main()
 
     IntRect arena;
 
+    VertexArray background;
+    Texture backgroundTex;
+    backgroundTex.loadFromFile("graphics/background_sheet.png");
+
     while (window.isOpen())
     {
         //input
@@ -39,12 +46,14 @@ int main()
                 {
                     state == State::PAUSED;
                 }
+
                 else if (event.key.code == Keyboard::Return && state == State::PAUSED)
                 {
                     state = State::PLAYING;
                     //clock restarts to avoid frame jump
                     clock.restart();
                 }
+
                 else if (event.key.code == Keyboard::Return && state == State::GAME_OVER)
                 {
                     state = State::LEVEL_UP;
@@ -130,7 +139,8 @@ int main()
                 arena.height = 500;
                 arena.left = 0;
                 arena.top = 0;
-                int tileSize = 50;
+                int tileSize = createBackground(background, arena);
+             
                 player.spawn(arena, screenResolution, tileSize);
                 clock.restart();
             }
@@ -155,6 +165,7 @@ int main()
         {
             window.clear();
             window.setView(mainView);
+            window.draw(background, &backgroundTex);
             window.draw(player.getSprite());
         }
         if (state == State::LEVEL_UP)

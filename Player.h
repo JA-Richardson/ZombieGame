@@ -49,7 +49,7 @@ public:
 
 	void spawn(IntRect arena, Vector2f resolution, int tileSize);
 
-	void resetPlayerStats();
+	//void resetPlayerStats();
 
 	//handles player being hit
 	bool hit(Time timeHit);
@@ -91,6 +91,6 @@ public:
 	void increaseHealth(int amount);
 
 	//currenty health
-	int getHealth();
+	//int getHealth();
 };
 

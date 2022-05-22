@@ -35,12 +35,12 @@ void Player::spawn(IntRect arena, Vector2f resolution, int tileSize)
 
 }
 
-void Player::resetPlayerStats()
-{
-	m_speed = START_SPEED;
-	m_health = START_HEALTH;
-	m_maxHealth = START_HEALTH;
-}
+//void Player::resetPlayerStats()
+//{
+//	m_speed = START_SPEED;
+//	m_health = START_HEALTH;
+//	m_maxHealth = START_HEALTH;
+//}
 
 bool Player::hit(Time timeHit)
 {
@@ -147,17 +147,17 @@ void Player::update(float elapsedTime, Vector2i mousePos)
 	{
 		m_pos.x = m_arena.width - m_tile;
 	}
-	if (m_pos.x < m_arena.width + m_tile)
+	if (m_pos.x < m_arena.left + m_tile)
 	{
-		m_pos.x = m_arena.width + m_tile;
+		m_pos.x = m_arena.left + m_tile;
 	}
-	if (m_pos.y > m_arena.width - m_tile)
+	if (m_pos.y > m_arena.height - m_tile)
 	{
-		m_pos.y = m_arena.width - m_tile;
+		m_pos.y = m_arena.height - m_tile;
 	}
-	if (m_pos.y < m_arena.width + m_tile)
+	if (m_pos.y < m_arena.top + m_tile)
 	{
-		m_pos.y = m_arena.width + m_tile;
+		m_pos.y = m_arena.top + m_tile;
 	}
 
 	//calc player angle
@@ -184,7 +184,7 @@ void Player::increaseHealth(int amount)
 	}
 }
 
-int Player::getHealth()
-{
-	return m_health;
-}
+//int Player::getHealth()
+//{
+//	return m_health;
+//}
