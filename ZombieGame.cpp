@@ -165,7 +165,7 @@ int main()
         {
             window.clear();
             window.setView(mainView);
-            window.draw(background, &backgroundTex);
+            window.draw(background, &backgroundTex); //pointer for the background
             window.draw(player.getSprite());
         }
         if (state == State::LEVEL_UP)
