@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "TextureHolder.h"
 
 Player::Player()
 {
@@ -7,8 +8,7 @@ Player::Player()
 	m_maxHealth = START_HEALTH;
 
 	//texture for the sprite
-	m_texture.loadFromFile("graphics/player.png");
-	m_sprite.setTexture(m_texture);
+	m_sprite = Sprite(TextureHolder::GetTexture("graphics/player.png"));
 
 	//sets sprite origin to centre
 	m_sprite.setOrigin(25, 25);

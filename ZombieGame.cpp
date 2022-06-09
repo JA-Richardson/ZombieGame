@@ -2,11 +2,14 @@
 
 #include "ZombieGame.h"
 #include "Player.h"
+#include "TextureHolder.h"
 
 
 using namespace sf;
 int main()
 {
+
+    TextureHolder holder;
     //game states
     enum class State{PAUSED, LEVEL_UP, GAME_OVER, PLAYING};
     //game starts in this state
@@ -30,8 +33,11 @@ int main()
     IntRect arena;
 
     VertexArray background;
-    Texture backgroundTex;
-    backgroundTex.loadFromFile("graphics/background_sheet.png");
+    Texture backgroundTex = TextureHolder::GetTexture("graphics/background_sheet.png");
+
+    int numEnemies;
+    int numEnemiesAlive;
+    Enemy* enemies = nullptr;
 
     while (window.isOpen())
     {
@@ -140,8 +146,11 @@ int main()
                 arena.left = 0;
                 arena.top = 0;
                 int tileSize = createBackground(background, arena);
-             
                 player.spawn(arena, screenResolution, tileSize);
+                numEnemies = 10;
+                delete[] enemies;
+                enemies = createHorde(numEnemies, arena);
+                numEnemiesAlive = numEnemies;
                 clock.restart();
             }
         }//end level up
@@ -159,6 +168,13 @@ int main()
             player.update(deltaTimeAsSeconds, Mouse::getPosition());
             Vector2f playerPos(player.getCentre());
             mainView.setCenter(player.getCentre());
+            for (int i = 0; i < numEnemies; i++)
+            {
+                if (enemies[i].isAlive())
+                {
+                    enemies[i].update(deltaTime.asSeconds(), playerPos);
+                }
+            }
         }
         //draw scene
         if (state == State::PLAYING)
@@ -166,6 +182,10 @@ int main()
             window.clear();
             window.setView(mainView);
             window.draw(background, &backgroundTex); //pointer for the background
+            for (int i = 0; i < numEnemies; i++)
+            {
+                window.draw(enemies[i].getSprite());
+            }
             window.draw(player.getSprite());
         }
         if (state == State::LEVEL_UP)
@@ -180,6 +200,7 @@ int main()
         window.display();
         
     }//end game loop
+    delete[] enemies;
 
      return 0;
 }
