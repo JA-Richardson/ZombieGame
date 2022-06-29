@@ -1,37 +1,29 @@
-﻿  Player.cpp
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(7,13): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(8,16): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(20,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+﻿  ZombieGame.cpp
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(21,53): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(21,24): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(22,53): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(148,27): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(23,71): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(152,26): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(23,51): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(156,28): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(177,27): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(415,59): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(160,25): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(164,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(170,26): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-C:\Users\arich\Documents\VS Projects\ZombieGame\Player.cpp(175,31): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+C:\Users\arich\Documents\VS Projects\ZombieGame\ZombieGame.cpp(219,37): warning C4390: ';': empty controlled statement found; is this the intent?
   ZombieGame.vcxproj -> C:\Users\arich\Documents\VS Projects\ZombieGame\Debug\ZombieGame.exe

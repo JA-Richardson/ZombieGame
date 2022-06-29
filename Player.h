@@ -91,6 +91,6 @@ public:
 	void increaseHealth(int amount);
 
 	//currenty health
-	//int getHealth();
+	int getHealth();
 };
 

@@ -184,7 +184,8 @@ void Player::increaseHealth(int amount)
 	}
 }
 
-//int Player::getHealth()
-//{
-//	return m_health;
-//}
+
+int Player::getHealth()
+{
+	return m_health;
+}
